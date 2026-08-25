@@ -72,6 +72,75 @@ body {
   text-wrap: balance;
 }
 
+.artist-statement {
+  width: min(100%, 48rem);
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.artist-statement summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.5rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  list-style: none;
+  touch-action: manipulation;
+  transition: background-color var(--transition-speed);
+}
+
+.artist-statement summary::-webkit-details-marker {
+  display: none;
+}
+
+.artist-statement summary:hover {
+  background-color: var(--control-hover);
+}
+
+.artist-statement summary:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.artist-statement-caret {
+  display: inline-block;
+  font-size: 0.8em;
+  transition: transform var(--transition-speed);
+}
+
+.artist-statement[open] .artist-statement-caret {
+  transform: rotate(180deg);
+}
+
+.artist-statement-content {
+  margin-top: 0.75rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+}
+
+.hero .artist-statement-content p {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.hero .artist-statement-content p + p {
+  margin-top: 1rem;
+}
+
 /* Base Gallery Container */
 .gallery-container {
   padding: 2rem;
