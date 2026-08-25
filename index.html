@@ -10,7 +10,7 @@
   <script src="script.js" defer></script>
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#my-form', formId: 'mvkperzy' });
+    formspree('initForm', { formElement: '#contact-form', formId: 'mvkperzy' });
   </script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </head>
@@ -381,7 +381,7 @@
       <div data-fs-success></div>
       <div data-fs-error></div>
 
-      <form class="contact-form" action="https://formspree.io/f/mvkperzy" method="post" enctype="text/plain">
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mvkperzy" method="post" enctype="text/plain">
         <div class="field-row">
             <label>Name<input type="text" name="name" autocomplete="name" required data-fs-field ><span data-fs-error="name"></span></label>
             <label>Email<input type="email" name="email" autocomplete="email" required data-fs-field ><span data-fs-error="email"></span></label>
