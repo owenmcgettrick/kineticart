@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /*
   const form = document.querySelector('.contact-form');
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -100,7 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (status) status.textContent = 'Opening your email application…';
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
-
+  */
+ 
   const year = document.querySelector('#current-year');
   if (year) year.textContent = String(new Date().getFullYear());
 });
