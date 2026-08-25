@@ -8,6 +8,11 @@
   <title>Kinetic Creations — Owen McGettrick</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#my-form', formId: 'mvkperzy' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to artwork</a>
@@ -372,19 +377,25 @@
         <p>Share the piece you are interested in, your location, and any questions about scale, installation, or a custom mobile.</p>
         <a class="contact-email" href="mailto:owen@owenmcgettrick.com">owen@owenmcgettrick.com</a>
       </div>
+
+      <div data-fs-success></div>
+      <div data-fs-error></div>
+
       <form class="contact-form" action="https://formspree.io/f/mvkperzy" method="post" enctype="text/plain">
         <div class="field-row">
-            <label>Name<input type="text" name="name" autocomplete="name" required></label>
-            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Name<input type="text" name="name" autocomplete="name" required data-fs-field ><span data-fs-error="name"></span></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required data-fs-field ><span data-fs-error="email"></span></label>
         </div>
-        <label>Artwork<select name="artwork" id="contact-artwork"><option value="General inquiry">General inquiry</option><option value="Primary Balance">Primary Balance</option><option value="Color Line">Color Line</option><option value="Porch Orbit">Porch Orbit</option><option value="Stairwell Study">Stairwell Study</option><option value="Horizontal No. 2">Horizontal No. 2</option><option value="Horizontal No. 3">Horizontal No. 3</option><option value="Horizontal Fin">Horizontal Fin</option><option value="Boxes">Boxes</option><option value="Double Trestle">Double Trestle</option><option value="Postmodern No. 1">Postmodern No. 1</option><option value="Postmodern No. 2">Postmodern No. 2</option><option value="Triple White">Triple White</option><option value="Zigzag">Zigzag</option><option value="Message Mobile">Message Mobile</option><option value="Commission">Commission or custom work</option></select></label>
+        <label>Artwork<select name="artwork" id="contact-artwork" data-fs-field ><option value="General inquiry">General inquiry</option><option value="Primary Balance">Primary Balance</option><option value="Color Line">Color Line</option><option value="Porch Orbit">Porch Orbit</option><option value="Stairwell Study">Stairwell Study</option><option value="Horizontal No. 2">Horizontal No. 2</option><option value="Horizontal No. 3">Horizontal No. 3</option><option value="Horizontal Fin">Horizontal Fin</option><option value="Boxes">Boxes</option><option value="Double Trestle">Double Trestle</option><option value="Postmodern No. 1">Postmodern No. 1</option><option value="Postmodern No. 2">Postmodern No. 2</option><option value="Triple White">Triple White</option><option value="Zigzag">Zigzag</option><option value="Message Mobile">Message Mobile</option><option value="Commission">Commission or custom work</option></select><span data-fs-error="artwork"></span></label>
         <label>Message
-            <textarea name="message" rows="6" required placeholder="Tell me what you would like to know…"></textarea>
+            <textarea name="message" rows="6" required placeholder="Tell me what you would like to know…" data-fs-field ></textarea>
+            <span data-fs-error="message"></span>
         </label>
-        <button class="button button-primary" type="submit">Send email</button>
+        <button class="button button-primary" type="submit" data-fs-submit-btn>Send email</button>
         <p class="form-note">No personal information is stored by this website.</p>
         <p class="form-status" aria-live="polite"></p>
       </form>
+
     </section>
   </main>
 
