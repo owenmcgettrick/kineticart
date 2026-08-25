@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const artistStatement = document.querySelector('#about');
+  const openArtistStatement = () => {
+    if (artistStatement) artistStatement.open = true;
+  };
+
+  document.querySelectorAll('a[href="#about"]').forEach((link) => {
+    link.addEventListener('click', openArtistStatement);
+  });
+
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#about') openArtistStatement();
+  });
+
+  if (window.location.hash === '#about') openArtistStatement();
+
   const carousels = document.querySelectorAll('.carousel');
 
   const setSlide = (carousel, requestedIndex) => {
