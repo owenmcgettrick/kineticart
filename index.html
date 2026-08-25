@@ -372,11 +372,16 @@
         <p>Share the piece you are interested in, your location, and any questions about scale, installation, or a custom mobile.</p>
         <a class="contact-email" href="mailto:owen@owenmcgettrick.com">owen@owenmcgettrick.com</a>
       </div>
-      <form class="contact-form" action="mailto:owen@owenmcgettrick.com" method="post" enctype="text/plain" data-contact-email="owen@owenmcgettrick.com">
-        <div class="field-row"><label>Name<input type="text" name="name" autocomplete="name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div>
+      <form class="contact-form" action="https://formspree.io/f/mvkperzy" method="post" enctype="text/plain" data-contact-email="owen@owenmcgettrick.com">
+        <div class="field-row">
+            <label>Name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
         <label>Artwork<select name="artwork" id="contact-artwork"><option value="General inquiry">General inquiry</option><option value="Primary Balance">Primary Balance</option><option value="Color Line">Color Line</option><option value="Porch Orbit">Porch Orbit</option><option value="Stairwell Study">Stairwell Study</option><option value="Horizontal No. 2">Horizontal No. 2</option><option value="Horizontal No. 3">Horizontal No. 3</option><option value="Horizontal Fin">Horizontal Fin</option><option value="Boxes">Boxes</option><option value="Double Trestle">Double Trestle</option><option value="Postmodern No. 1">Postmodern No. 1</option><option value="Postmodern No. 2">Postmodern No. 2</option><option value="Triple White">Triple White</option><option value="Zigzag">Zigzag</option><option value="Message Mobile">Message Mobile</option><option value="Commission">Commission or custom work</option></select></label>
-        <label>Message<textarea name="message" rows="6" required placeholder="Tell me what you would like to know…"></textarea></label>
-        <button class="button button-primary" type="submit">Prepare email</button>
+        <label>Message<textarea name="message" rows="6" required placeholder="Tell me what you would like to know…">
+            <textarea name="message"></textarea>
+        </label>
+        <button class="button button-primary" type="submit">Send email</button>
         <p class="form-note">Submitting opens a prepared message in your email application. No information is stored by this website.</p>
         <p class="form-status" aria-live="polite"></p>
       </form>
