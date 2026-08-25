@@ -184,7 +184,7 @@ def render_featured_card(item: dict, category: dict) -> str:
         </a>'''
 
 
-def render_page(site: dict, catalog: dict) -> str:
+def render_page(site: dict, catalog: dict, version: str) -> str:
     used_categories = [category for category in catalog["categories"] if any(item["category"] == category["id"] for item in catalog["items"])]
     categories_by_id = {category["id"]: category for category in catalog["categories"]}
     nav_links = "".join(f'<a href="#{escaped(category["id"])}">{escaped(category["name"])}</a>' for category in used_categories)
@@ -271,7 +271,7 @@ def render_page(site: dict, catalog: dict) -> str:
     </section>
   </main>
 
-  <footer class="site-footer"><p>© <span id="current-year"></span> {escaped(site['artist'])}</p><a href="#top">Back to top ↑</a></footer>
+  <footer class="site-footer"><p>© <span id="current-year"></span> {escaped(site['artist'])}</p><p class="site-version">Version <span data-site-version>{escaped(version)}</span></p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
 '''
@@ -280,9 +280,10 @@ def render_page(site: dict, catalog: dict) -> str:
 def main() -> int:
     site = load_json("site.json")
     catalog = load_json("items.json")
+    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
     validate(site, catalog)
     output = ROOT / "index.html"
-    output.write_text(render_page(site, catalog), encoding="utf-8")
+    output.write_text(render_page(site, catalog, version), encoding="utf-8")
     print(f"Built {output.name} with {len(catalog['items'])} artworks.")
     return 0
 

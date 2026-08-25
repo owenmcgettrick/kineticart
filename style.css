@@ -763,9 +763,9 @@ textarea {
 }
 
 .site-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1.4rem max(1.25rem, env(safe-area-inset-right)) max(1.4rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
   background: #191a1a;
@@ -773,7 +773,12 @@ textarea {
   font-size: 0.8rem;
 }
 
+.site-footer .site-version {
+  text-align: center;
+}
+
 .site-footer a {
+  justify-self: end;
   color: rgba(255, 255, 255, 0.78);
   text-underline-offset: 0.25em;
 }
@@ -884,8 +889,7 @@ textarea {
   }
 
   .site-footer {
-    align-items: flex-start;
-    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 

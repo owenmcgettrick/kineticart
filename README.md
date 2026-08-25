@@ -20,6 +20,18 @@ The helper asks for the artwork details and media files, then:
 
 Review the result before committing and pushing it.
 
+## Site version
+
+The version shown in the footer starts at `1.0`. A repository pre-commit hook
+increments the second number for each subsequent commit and includes the new
+version in that commit. The hook is enabled in this checkout with:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Run that command once after cloning the repository on another computer.
+
 ## Edit an existing artwork
 
 Edit its record in `items.json`, then rebuild:
