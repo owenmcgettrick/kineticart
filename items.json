@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "simple-mobiles",
+      "name": "Simple Mobiles",
+      "description": "Airy compositions built from a restrained vocabulary of balanced forms and color."
+    },
+    {
+      "id": "horizontal-mobiles",
+      "name": "Horizontal Mobiles",
+      "description": "Wide, layered works that carry movement across a room with long lines and shifting planes."
+    },
+    {
+      "id": "sculptural-mobiles",
+      "name": "Sculptural Mobiles",
+      "description": "Complex constructions that combine engineered geometry with responsive, suspended motion."
+    },
+    {
+      "id": "custom-mobiles",
+      "name": "Custom Mobiles",
+      "description": "Personalized works developed around a space, message, palette, or visual idea."
+    },
+    {
+      "id": "tabletop-mobiles",
+      "name": "Tabletop Mobiles",
+      "description": "Freestanding kinetic works scaled for shelves, tables, and intimate spaces."
+    },
+    {
+      "id": "wall-mounted-mobiles",
+      "name": "Wall-Mounted Mobiles",
+      "description": "Kinetic compositions designed to animate the plane of a wall."
+    }
+  ],
+  "items": [
+    {
+      "id": "simple-1",
+      "title": "Primary Balance",
+      "category": "simple-mobiles",
+      "description": "A compact suspended composition of primary-colored discs and dark geometric forms, balanced to respond to small currents of air.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": true,
+      "media": [
+        {"source": "img/simple_1/simple_1_1.jpeg", "alt": "Primary Balance mobile with red, blue, white, and black suspended forms"},
+        {"source": "img/simple_1/simple_1_2.jpeg", "alt": "Alternate view of the Primary Balance mobile"}
+      ]
+    },
+    {
+      "id": "simple-2",
+      "title": "Color Line",
+      "category": "simple-mobiles",
+      "description": "A light horizontal mobile punctuated by red, yellow, blue, white, and gray shapes that drift independently along fine arcs.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/simple_2/image5.jpeg", "alt": "Color Line mobile suspended beneath a porch ceiling"},
+        {"source": "img/simple_2/image8.jpeg", "alt": "Alternate view of the colorful suspended forms in Color Line"}
+      ]
+    },
+    {
+      "id": "simple-3",
+      "title": "Porch Orbit",
+      "category": "simple-mobiles",
+      "description": "An understated outdoor mobile of dark circular elements with a single red accent, arranged to turn gently beneath a covered space.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/simple_3/image3.jpeg", "alt": "Porch Orbit mobile with black and red discs"},
+        {"source": "img/simple_3/image4.jpeg", "alt": "Wide view of Porch Orbit installed outdoors"}
+      ]
+    },
+    {
+      "id": "simple-4",
+      "title": "Stairwell Study",
+      "category": "simple-mobiles",
+      "description": "A cascading study in black, white, and red whose small balanced arms activate the vertical volume of a stairwell.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/simple_4/image6.jpeg", "alt": "Stairwell Study mobile installed above a staircase"},
+        {"source": "img/simple_4/image7.jpeg", "alt": "Alternate angle of the black, white, and red Stairwell Study"}
+      ]
+    },
+    {
+      "id": "horizontal-2",
+      "title": "Horizontal No. 2",
+      "category": "horizontal-mobiles",
+      "description": "Broad elliptical planes extend from a compact central spine, creating slow rotations and an evolving pattern of overlap.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/horizontal_2/horizontal_2.1.jpeg", "alt": "Horizontal No. 2 mobile with wide oval planes"},
+        {"source": "img/horizontal_2/horizontal_2.2.jpeg", "alt": "Alternate view of Horizontal No. 2"},
+        {"source": "img/horizontal_2/horizontal_2.3.mov", "alt": "Horizontal No. 2 moving in the air"}
+      ]
+    },
+    {
+      "id": "horizontal-3",
+      "title": "Horizontal No. 3",
+      "category": "horizontal-mobiles",
+      "description": "A multi-level arrangement of circular planes and branching arms that creates a changing field of silhouettes as it turns.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": true,
+      "media": [
+        {"source": "img/horizontal_3/horizontal_3.1.jpeg", "alt": "Horizontal No. 3 mobile viewed from below"},
+        {"source": "img/horizontal_3/horizontal_3.2.jpeg", "alt": "Side view of Horizontal No. 3"},
+        {"source": "img/horizontal_3/horizontal_3.3.jpeg", "alt": "Alternate view of the layered planes in Horizontal No. 3"},
+        {"source": "img/horizontal_3/horizontal_3.4.mov", "alt": "Horizontal No. 3 in motion"}
+      ]
+    },
+    {
+      "id": "horizontal-fin",
+      "title": "Horizontal Fin",
+      "category": "horizontal-mobiles",
+      "description": "Tapered fin-like counterweights give this horizontal work a directional, aerodynamic character while broad oval planes turn at the opposite edge.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/horizontal_fin/horizontal_fin.1.jpeg", "alt": "Horizontal Fin mobile with tapered counterweights"},
+        {"source": "img/horizontal_fin/horizontal_fin.2.jpeg", "alt": "Alternate angle of Horizontal Fin"},
+        {"source": "img/horizontal_fin/horizontal_fin.3.mov", "alt": "Horizontal Fin mobile in motion"}
+      ]
+    },
+    {
+      "id": "boxes",
+      "title": "Boxes",
+      "category": "horizontal-mobiles",
+      "description": "A long rectilinear framework carries a rhythmic sequence of open and solid box forms, bringing measured movement to architectural space.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/boxes/boxes.1.jpeg", "alt": "Boxes mobile with suspended rectilinear forms"},
+        {"source": "img/boxes/boxes.2.jpeg", "alt": "Alternate view of the Boxes mobile"},
+        {"source": "img/boxes/boxes.3.mov", "alt": "Boxes mobile moving in place"}
+      ]
+    },
+    {
+      "id": "double-trestle",
+      "title": "Double Trestle",
+      "category": "sculptural-mobiles",
+      "description": "Two truss-like structures, a crescent plane, and small weighted elements form an industrial composition with multiple layers of independent motion.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": true,
+      "media": [
+        {"source": "img/double_trestle/image0 (1).jpeg", "alt": "Double Trestle mobile with crescent and truss-like forms"},
+        {"source": "img/double_trestle/image1 (1).jpeg", "alt": "Alternate view of the Double Trestle construction"},
+        {"source": "img/double_trestle/image2.jpeg", "alt": "Detail of the balanced elements in Double Trestle"},
+        {"source": "img/double_trestle/image3.jpeg", "alt": "Wide view of Double Trestle"},
+        {"source": "img/double_trestle/Video (1).mov", "alt": "Double Trestle mobile in motion"}
+      ]
+    },
+    {
+      "id": "post-mod-1",
+      "title": "Postmodern No. 1",
+      "category": "sculptural-mobiles",
+      "description": "An asymmetric field of circular and tapered shapes in black, white, and red, connected by a delicate network of branching lines.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/post_mod_1/post_mod_1.1.jpeg", "alt": "Postmodern No. 1 with red, white, and dark suspended shapes"},
+        {"source": "img/post_mod_1/post_mod_1.2.jpeg", "alt": "Alternate view of Postmodern No. 1"},
+        {"source": "img/post_mod_1/post_mod_1.3.mov", "alt": "Postmodern No. 1 moving"},
+        {"source": "img/post_mod_1/post_mod_1.mov", "alt": "Wide motion study of Postmodern No. 1"}
+      ]
+    },
+    {
+      "id": "post-mod-2",
+      "title": "Postmodern No. 2",
+      "category": "sculptural-mobiles",
+      "description": "An expansive, branching construction in which small geometric planes travel through layered arcs, producing complex movement from an exceptionally light structure.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": true,
+      "media": [
+        {"source": "img/post_mod_2/post_mod_2.1.jpeg", "alt": "Postmodern No. 2 suspended across an interior"},
+        {"source": "img/post_mod_2/post_mod_2.2.jpeg", "alt": "Alternate view of the branching Postmodern No. 2 mobile"},
+        {"source": "img/post_mod_2/post_mod_2.3.jpeg", "alt": "Detail view of Postmodern No. 2"},
+        {"source": "img/post_mod_2/post_mod_2.4.jpeg", "alt": "Wide view of Postmodern No. 2"},
+        {"source": "img/post_mod_2/post_mod_2.6.jpeg", "alt": "Postmodern No. 2 photographed from below"},
+        {"source": "img/post_mod_2/post_mod_2.7.jpeg", "alt": "Alternate installation view of Postmodern No. 2"},
+        {"source": "img/post_mod_2/post_mod_2.5.mov", "alt": "Postmodern No. 2 in motion"}
+      ]
+    },
+    {
+      "id": "triple-white",
+      "title": "Triple White",
+      "category": "sculptural-mobiles",
+      "description": "Three pale, curved planes orbit a finely articulated vertical center, shifting between symmetry and imbalance as the work turns.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/triple_white/triple_white.1.jpeg", "alt": "Triple White mobile with three curved white planes"},
+        {"source": "img/triple_white/triple_white.2.jpeg", "alt": "Alternate view of Triple White"},
+        {"source": "img/triple_white/triple_white.3.mov", "alt": "Triple White mobile in motion"}
+      ]
+    },
+    {
+      "id": "zigzag",
+      "title": "Zigzag",
+      "category": "sculptural-mobiles",
+      "description": "A stepped sequence of linear arms creates a shifting architectural outline, anchored visually by contrasting black and white end forms.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "inquire",
+      "featured": false,
+      "media": [
+        {"source": "img/zigzag/zigzag.1.jpeg", "alt": "Zigzag mobile with stepped linear arms"},
+        {"source": "img/zigzag/zigzag.2.jpeg", "alt": "Alternate view of the Zigzag mobile"},
+        {"source": "img/zigzag/zigzag.3.jpeg", "alt": "Detail view of Zigzag"},
+        {"source": "img/zigzag/zigzag.4.mov", "alt": "Zigzag mobile in motion"}
+      ]
+    },
+    {
+      "id": "sample-message",
+      "title": "Message Mobile",
+      "category": "custom-mobiles",
+      "description": "A personalized kinetic composition that suspends colorful letterforms along sweeping arcs, turning language into an evolving spatial arrangement.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": null,
+      "materials": null,
+      "year": null,
+      "availability": "made-to-order",
+      "featured": false,
+      "media": [
+        {"source": "img/sample_message/sample_message.1.jpeg", "alt": "Custom Message Mobile with colorful suspended letters"},
+        {"source": "img/sample_message/sample_message.2.jpeg", "alt": "Alternate view of the custom Message Mobile"},
+        {"source": "img/sample_message/sample_message.3.mov", "alt": "Custom Message Mobile in motion"}
+      ]
+    }
+  ]
+}
