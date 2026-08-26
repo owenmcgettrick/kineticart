@@ -125,7 +125,13 @@ def render_media(item: dict, media: dict, index: int, *, eager: bool) -> str:
 
 
 def render_card(item: dict, category: dict, *, eager: bool) -> str:
-    media_html = "".join(render_media(item, media, index, eager=eager and index == 0) for index, media in enumerate(item["media"]))
+    # Lead with motion when available, keeping the remaining views in order.
+    gallery_media = list(item["media"])
+    for index, media in enumerate(gallery_media):
+        if Path(media["source"]).suffix.lower() in VIDEO_EXTENSIONS:
+            gallery_media.insert(0, gallery_media.pop(index))
+            break
+    media_html = "".join(render_media(item, media, index, eager=eager and index == 0) for index, media in enumerate(gallery_media))
     controls = ""
     if len(item["media"]) > 1:
         controls = f'''

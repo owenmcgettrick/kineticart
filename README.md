@@ -40,6 +40,10 @@ Edit its record in `items.json`, then rebuild:
 python3 build.py
 ```
 
+Artwork galleries start with their first video when one is available and play
+it automatically when visible. The remaining views keep their catalog order;
+galleries containing only photos are unchanged.
+
 Use a number for `price`, or `null` to display “Contact for price.” Optional
 fields such as `dimensions`, `materials`, and `year` can also remain `null`.
 Supported availability values are `available`, `inquire`, `made-to-order`,
