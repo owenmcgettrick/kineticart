@@ -1,7 +1,8 @@
 # Kinetic Creations website
 
 This is a static portfolio and inquiry website for Owen McGettrick. GitHub serves
-the generated `index.html` at [owenmcgettrick.com](https://owenmcgettrick.com/).
+the generated `index.html` and artwork detail pages at
+[owenmcgettrick.com](https://owenmcgettrick.com/).
 
 ## Add an artwork
 
@@ -16,7 +17,7 @@ The helper asks for the artwork details and media files, then:
 1. adds the artwork to `items.json`;
 2. copies its original media into `img/`;
 3. creates smaller web images and a web-video version when supported; and
-4. rebuilds `index.html`.
+4. rebuilds `index.html` and creates a `mobile-<id>.html` page for every artwork.
 
 Review the result before committing and pushing it.
 
@@ -40,9 +41,16 @@ Edit its record in `items.json`, then rebuild:
 python3 build.py
 ```
 
-Artwork galleries start with their first video when one is available and play
-it automatically when visible. The remaining views keep their catalog order;
-galleries containing only photos are unchanged.
+The home page shows one preview per artwork and a “See Detail” link to its
+`mobile-<id>.html` page. Each detail page contains the full gallery, artwork
+information, and a Back button returning to the matching home-page card.
+Artwork previews and galleries start with their first video when available and
+play it automatically when visible. The remaining gallery views keep their
+catalog order; photo-only galleries keep their original order.
+
+The same build command generates pages for new entries in `items.json`; no
+manual HTML editing is needed. Commit the generated pages along with the
+catalog changes. To run the build tests, use `python3 -m unittest -v`.
 
 Use a number for `price`, or `null` to display “Contact for price.” Optional
 fields such as `dimensions`, `materials`, and `year` can also remain `null`.
@@ -55,13 +63,12 @@ them.
 
 ## Site and contact details
 
-The artist name, introduction, statement, and contact email are stored in
-`site.json`. Confirm that `owen@owenmcgettrick.com` is an active mailbox before
-publishing; change `contact_email` there if another address should receive
-inquiries, then run `python3 build.py`.
+The artist name, page title, description, introduction, statement, contact email,
+and Formspree form ID are stored in `site.json`. Edit these settings there, then
+run `python3 build.py` so future builds retain the changes.
 
-The contact form prepares a message in the visitor's email application. The
-static website does not collect or store form submissions.
+The contact form submits through the existing Formspree integration. Inquire
+links on detail pages return to the home-page form with the artwork selected.
 
 ## Refresh optimized media
 

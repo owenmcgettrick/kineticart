@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setSlide(carousel, Number(carousel.dataset.index) + 1);
     });
     carousel.addEventListener('keydown', (event) => {
+      if (carousel.querySelectorAll('.carousel-item').length < 2) return;
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();
       const direction = event.key === 'ArrowRight' ? 1 : -1;
@@ -72,6 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const artworkSelect = document.querySelector('#contact-artwork');
   const message = document.querySelector('.contact-form textarea');
+  const requestedArtwork = new URLSearchParams(window.location.search).get('artwork');
+  if (artworkSelect && [...artworkSelect.options].some((option) => option.value === requestedArtwork)) {
+    artworkSelect.value = requestedArtwork;
+  }
   document.querySelectorAll('[data-inquire-title]').forEach((button) => {
     button.addEventListener('click', () => {
       if (artworkSelect) artworkSelect.value = button.dataset.inquireTitle;

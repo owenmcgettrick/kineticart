@@ -1,7 +1,13 @@
+import copy
+import json
+import re
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
-from build import render_card
+import build
+from build import detail_filename, render_card, render_detail_page, render_page
 
 
 class GalleryOrderTests(unittest.TestCase):
@@ -41,6 +47,66 @@ class GalleryOrderTests(unittest.TestCase):
 
     def test_video_already_first_keeps_order(self):
         self.check_order(["motion.mp4", "first.jpg"], ["motion.mp4", "first.jpg"])
+
+
+class ArtworkPageTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.site = build.load_json("site.json")
+        cls.catalog = build.load_json("items.json")
+        cls.categories = {entry["id"]: entry for entry in cls.catalog["categories"]}
+
+    def test_home_has_one_preview_and_detail_link_per_artwork(self):
+        page = render_page(self.site, self.catalog, "1.0")
+        self.assertNotIn('class="carousel-controls"', page)
+        self.assertEqual(page.count('class="carousel-item active"'), len(self.catalog["items"]))
+        for item in self.catalog["items"]:
+            with self.subTest(item=item["id"]):
+                card = render_card(item, self.categories[item["category"]], eager=False, preview=True)
+                self.assertIn(f'href="{detail_filename(item)}"', card)
+                self.assertIn('>See Detail</a>', card)
+                has_video = any(Path(media["source"]).suffix.lower() in build.VIDEO_EXTENSIONS for media in item["media"])
+                self.assertEqual('<video ' in card, has_video)
+
+    def test_detail_pages_preserve_galleries_and_link_back(self):
+        for item in self.catalog["items"]:
+            with self.subTest(item=item["id"]):
+                page = render_detail_page(self.site, item, self.categories[item["category"]])
+                self.assertEqual(len(re.findall(r'class="carousel-item(?: active)?"', page)), len(item["media"]))
+                self.assertIn(f'href="index.html#{item["id"]}"', page)
+                self.assertIn(f'<h1>{build.escaped(item["title"])}</h1>', page)
+                self.assertIn(build.escaped(item["description"]), page)
+                self.assertIn('href="index.html?artwork=', page)
+                self.assertNotIn('>See Detail</a>', page)
+
+    def test_build_creates_page_for_new_catalog_entry(self):
+        catalog = copy.deepcopy(self.catalog)
+        catalog["items"] = [catalog["items"][0]]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "img").symlink_to(build.ROOT / "img", target_is_directory=True)
+            for filename in ("style.css", "script.js"):
+                (root / filename).symlink_to(build.ROOT / filename)
+            (root / "site.json").write_text(json.dumps(self.site))
+            (root / "VERSION").write_text("1.0\n")
+            (root / "items.json").write_text(json.dumps(catalog))
+            with patch("build.ROOT", root):
+                build.main()
+                new_item = copy.deepcopy(catalog["items"][0])
+                new_item.update(id="new-mobile", title="New Mobile")
+                new_item["media"] = new_item["media"][:1]
+                catalog["items"].append(new_item)
+                (root / "items.json").write_text(json.dumps(catalog))
+                build.main()
+            self.assertIn('href="mobile-new-mobile.html"', (root / "index.html").read_text())
+            self.assertIn('<h1>New Mobile</h1>', (root / "mobile-new-mobile.html").read_text())
+            self.assertNotIn('class="carousel-controls"', (root / "mobile-new-mobile.html").read_text())
+
+    def test_invalid_id_cannot_write_outside_detail_page_path(self):
+        catalog = copy.deepcopy(self.catalog)
+        catalog["items"][0]["id"] = "../outside"
+        with self.assertRaisesRegex(ValueError, "Invalid artwork ID"):
+            build.validate(self.site, catalog)
 
 
 if __name__ == "__main__":

@@ -564,6 +564,35 @@ textarea {
   text-align: center;
 }
 
+.detail-link {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 3;
+  text-transform: none;
+}
+
+.detail-page {
+  width: min(100%, 48rem);
+  margin-inline: auto;
+  padding: 1.25rem 1.25rem 3rem;
+}
+
+.back-button {
+  margin-bottom: 1.25rem;
+  background: var(--ink);
+  color: white;
+  text-transform: none;
+}
+
+.back-button:hover {
+  background: var(--ink-soft);
+}
+
+.detail-page .artwork-copy {
+  min-height: 0;
+}
+
 .artwork-copy {
   display: flex;
   flex-direction: column;
@@ -592,7 +621,8 @@ textarea {
   content: "·";
 }
 
-.artwork-copy h3 {
+.artwork-copy h3,
+.artwork-copy h1 {
   margin-top: 0.75rem;
   font-size: clamp(1.65rem, 3vw, 2.25rem);
   font-weight: 550;

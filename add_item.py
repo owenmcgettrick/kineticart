@@ -146,7 +146,7 @@ def main() -> int:
     catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     subprocess.run(["python3", str(ROOT / "build.py")], check=True, cwd=ROOT)
-    print(f"\nAdded {title}. Review the site, then commit the new and changed files.")
+    print(f"\nAdded {title} and mobile-{item_id}.html. Review the site, then commit the new and changed files.")
     return 0
 
 
