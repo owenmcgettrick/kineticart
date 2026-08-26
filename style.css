@@ -235,6 +235,7 @@ textarea {
   aspect-ratio: 1;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .hero-orbit::before,
@@ -251,16 +252,45 @@ textarea {
 }
 
 .hero-orbit span {
+  --orbit-start: -30deg;
   position: absolute;
+  inset: 0;
+  transform: rotate(var(--orbit-start));
+  animation: hero-orbit-turn 28s linear infinite;
+}
+
+.hero-orbit span::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: "";
   width: clamp(0.65rem, 1.4vw, 1.1rem);
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--red);
+  transform: translate(-50%, -50%);
 }
 
-.hero-orbit span:nth-child(1) { top: 9%; left: 24%; }
-.hero-orbit span:nth-child(2) { top: 48%; right: 1%; }
-.hero-orbit span:nth-child(3) { bottom: 11%; left: 29%; background: rgba(255, 255, 255, 0.65); }
+.hero-orbit span:nth-child(2) {
+  --orbit-start: 90deg;
+  inset: 13%;
+  animation-duration: 36s;
+  animation-direction: reverse;
+}
+
+.hero-orbit span:nth-child(3) {
+  --orbit-start: -150deg;
+  animation-duration: 40s;
+}
+
+.hero-orbit span:nth-child(3)::before {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+@keyframes hero-orbit-turn {
+  from { transform: rotate(var(--orbit-start)); }
+  to { transform: rotate(calc(var(--orbit-start) + 1turn)); }
+}
 
 .artist-statement {
   margin-top: 2.5rem !important;
@@ -931,6 +961,10 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-orbit span {
+    animation: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
