@@ -214,7 +214,7 @@ def render_detail_page(site: dict, item: dict, category: dict) -> str:
 <body>
   <main class="detail-page">
     <a class="button back-button" href="index.html#{escaped(item['id'])}">← Back</a>
-    {render_card(item, category, eager=True)}
+{render_card(item, category, eager=True)}
   </main>
 </body>
 </html>
