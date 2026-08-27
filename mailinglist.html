@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Join the Kinetic Creations mailing list for news and updates from Owen McGettrick.">
+  <meta name="theme-color" content="#252626">
+  <title>Join Mailing List — Kinetic Creations</title>
+  <link rel="stylesheet" href="style.css?v=3274e8eba94c">
+  <script src="script.js?v=4881bede5403" defer></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#mailing-list-form', formId: "mvkperzy" });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</head>
+<body class="mailing-list-page">
+  <a class="skip-link" href="#mailing-list-form">Skip to mailing list form</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Kinetic Creations home"><strong>Owen McGettrick</strong><span>Kinetic Creations</span></a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="hero mailing-list-hero" aria-labelledby="page-title">
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="eyebrow">Stay connected</p>
+      <h1 id="page-title">Kinetic Creations</h1>
+      <h2>Join Mailing List</h2>
+
+      <div data-fs-success></div>
+      <div data-fs-error></div>
+
+      <form id="mailing-list-form" class="contact-form mailing-list-form" action="https://formspree.io/f/mvkperzy" method="post" enctype="text/plain">
+        <label>Name<input type="text" name="name" autocomplete="name" required data-fs-field><span data-fs-error="name"></span></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required data-fs-field><span data-fs-error="email"></span></label>
+        <input type="hidden" name="form_type" value="Mailing list signup">
+        <button class="button button-primary" type="submit" data-fs-submit-btn>Join Mailing List</button>
+        <p class="form-note">No personal information is stored by this website.</p>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="current-year"></span> Owen McGettrick</p><p class="site-version">Version <span data-site-version>1.6</span></p><a href="index.html">Back to home ↑</a></footer>
+</body>
+</html>

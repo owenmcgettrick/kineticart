@@ -221,6 +221,57 @@ def render_detail_page(site: dict, item: dict, category: dict) -> str:
 '''
 
 
+def render_mailinglist_page(site: dict, version: str) -> str:
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Join the {escaped(site['title'])} mailing list for news and updates from {escaped(site['artist'])}.">
+  <meta name="theme-color" content="#252626">
+  <title>Join Mailing List — {escaped(site['title'])}</title>
+  <link rel="stylesheet" href="{asset_url('style.css')}">
+  <script src="{asset_url('script.js')}" defer></script>
+  <script>
+    window.formspree = window.formspree || function () {{ (formspree.q = formspree.q || []).push(arguments); }};
+    formspree('initForm', {{ formElement: '#mailing-list-form', formId: {json.dumps(site['formspree_id'])} }});
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</head>
+<body class="mailing-list-page">
+  <a class="skip-link" href="#mailing-list-form">Skip to mailing list form</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="{escaped(site['title'])} home"><strong>{escaped(site['artist'])}</strong><span>{escaped(site['title'])}</span></a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="hero mailing-list-hero" aria-labelledby="page-title">
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="eyebrow">Stay connected</p>
+      <h1 id="page-title">{escaped(site['title'])}</h1>
+      <h2>Join Mailing List</h2>
+
+      <div data-fs-success></div>
+      <div data-fs-error></div>
+
+      <form id="mailing-list-form" class="contact-form mailing-list-form" action="https://formspree.io/f/{escaped(site['formspree_id'])}" method="post" enctype="text/plain">
+        <label>Name<input type="text" name="name" autocomplete="name" required data-fs-field><span data-fs-error="name"></span></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required data-fs-field><span data-fs-error="email"></span></label>
+        <input type="hidden" name="form_type" value="Mailing list signup">
+        <button class="button button-primary" type="submit" data-fs-submit-btn>Join Mailing List</button>
+        <p class="form-note">No personal information is stored by this website.</p>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="current-year"></span> {escaped(site['artist'])}</p><p class="site-version">Version <span data-site-version>{escaped(version)}</span></p><a href="index.html">Back to home ↑</a></footer>
+</body>
+</html>
+'''
+
+
 def render_featured_card(item: dict, category: dict) -> str:
     media = next(
         (entry for entry in item["media"] if (ROOT / entry["source"]).suffix.lower() in IMAGE_EXTENSIONS),
@@ -289,7 +340,7 @@ def render_page(site: dict, catalog: dict, version: str) -> str:
   <a class="skip-link" href="#work">Skip to artwork</a>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="{escaped(site['title'])} home"><strong>{escaped(site['artist'])}</strong><span>{escaped(site['title'])}</span></a>
-    <nav class="primary-nav" aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a href="mailinglist.html">Mailing List</a></nav>
   </header>
 
   <main id="top">
@@ -355,11 +406,13 @@ def main() -> int:
     validate(site, catalog)
     output = ROOT / "index.html"
     output.write_text(render_page(site, catalog, version), encoding="utf-8")
+    mailing_list_output = ROOT / "mailinglist.html"
+    mailing_list_output.write_text(render_mailinglist_page(site, version), encoding="utf-8")
     categories = {category["id"]: category for category in catalog["categories"]}
     for item in catalog["items"]:
         detail = ROOT / detail_filename(item)
         detail.write_text(render_detail_page(site, item, categories[item["category"]]), encoding="utf-8")
-    print(f"Built {output.name} and {len(catalog['items'])} artwork detail pages.")
+    print(f"Built {output.name}, {mailing_list_output.name}, and {len(catalog['items'])} artwork detail pages.")
     return 0
 
 

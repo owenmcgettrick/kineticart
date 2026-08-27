@@ -816,6 +816,34 @@ textarea {
   justify-self: start;
 }
 
+.mailing-list-page {
+  background: var(--ink);
+}
+
+.mailing-list-hero {
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
+}
+
+.mailing-list-hero h2 {
+  max-width: 14ch;
+  margin-top: 1.6rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.mailing-list-form {
+  max-width: 34rem;
+  margin-top: 2.25rem;
+}
+
+.mailing-list-form > input[type="hidden"] {
+  display: none;
+}
+
 .form-note,
 .form-status {
   color: rgba(255, 255, 255, 0.55);

@@ -7,7 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import build
-from build import detail_filename, render_card, render_detail_page, render_page
+from build import detail_filename, render_card, render_detail_page, render_mailinglist_page, render_page
 
 
 class GalleryOrderTests(unittest.TestCase):
@@ -79,6 +79,16 @@ class ArtworkPageTests(unittest.TestCase):
                 self.assertIn('href="index.html?artwork=', page)
                 self.assertNotIn('>See Detail</a>', page)
 
+    def test_mailing_list_page_has_only_name_and_email_fields(self):
+        page = render_mailinglist_page(self.site, "1.0")
+        self.assertIn('<h1 id="page-title">Kinetic Creations</h1>', page)
+        self.assertIn('<h2>Join Mailing List</h2>', page)
+        self.assertIn('class="hero mailing-list-hero"', page)
+        self.assertIn('name="name"', page)
+        self.assertIn('name="email"', page)
+        self.assertNotIn('<select', page)
+        self.assertNotIn('<textarea', page)
+
     def test_build_creates_page_for_new_catalog_entry(self):
         catalog = copy.deepcopy(self.catalog)
         catalog["items"] = [catalog["items"][0]]
@@ -101,6 +111,7 @@ class ArtworkPageTests(unittest.TestCase):
             self.assertIn('href="mobile-new-mobile.html"', (root / "index.html").read_text())
             self.assertIn('<h1>New Mobile</h1>', (root / "mobile-new-mobile.html").read_text())
             self.assertNotIn('class="carousel-controls"', (root / "mobile-new-mobile.html").read_text())
+            self.assertIn('<h2>Join Mailing List</h2>', (root / "mailinglist.html").read_text())
 
     def test_invalid_id_cannot_write_outside_detail_page_path(self):
         catalog = copy.deepcopy(self.catalog)
