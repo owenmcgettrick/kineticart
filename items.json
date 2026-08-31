@@ -46,8 +46,14 @@
       "availability": "inquire",
       "featured": true,
       "media": [
-        {"source": "img/simple_1/simple_1_1.jpeg", "alt": "Primary Balance mobile with red, blue, white, and black suspended forms"},
-        {"source": "img/simple_1/simple_1_2.jpeg", "alt": "Alternate view of the Primary Balance mobile"}
+        {
+          "source": "img/simple_1/simple_1_1.jpeg",
+          "alt": "Primary Balance mobile with red, blue, white, and black suspended forms"
+        },
+        {
+          "source": "img/simple_1/simple_1_2.jpeg",
+          "alt": "Alternate view of the Primary Balance mobile"
+        }
       ]
     },
     {
@@ -63,8 +69,14 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/simple_2/image5.jpeg", "alt": "Color Line mobile suspended beneath a porch ceiling"},
-        {"source": "img/simple_2/image8.jpeg", "alt": "Alternate view of the colorful suspended forms in Color Line"}
+        {
+          "source": "img/simple_2/image5.jpeg",
+          "alt": "Color Line mobile suspended beneath a porch ceiling"
+        },
+        {
+          "source": "img/simple_2/image8.jpeg",
+          "alt": "Alternate view of the colorful suspended forms in Color Line"
+        }
       ]
     },
     {
@@ -80,8 +92,14 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/simple_3/image3.jpeg", "alt": "Porch Orbit mobile with black and red discs"},
-        {"source": "img/simple_3/image4.jpeg", "alt": "Wide view of Porch Orbit installed outdoors"}
+        {
+          "source": "img/simple_3/image3.jpeg",
+          "alt": "Porch Orbit mobile with black and red discs"
+        },
+        {
+          "source": "img/simple_3/image4.jpeg",
+          "alt": "Wide view of Porch Orbit installed outdoors"
+        }
       ]
     },
     {
@@ -97,8 +115,14 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/simple_4/image6.jpeg", "alt": "Stairwell Study mobile installed above a staircase"},
-        {"source": "img/simple_4/image7.jpeg", "alt": "Alternate angle of the black, white, and red Stairwell Study"}
+        {
+          "source": "img/simple_4/image6.jpeg",
+          "alt": "Stairwell Study mobile installed above a staircase"
+        },
+        {
+          "source": "img/simple_4/image7.jpeg",
+          "alt": "Alternate angle of the black, white, and red Stairwell Study"
+        }
       ]
     },
     {
@@ -114,9 +138,18 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/horizontal_2/horizontal_2.1.jpeg", "alt": "Horizontal No. 2 mobile with wide oval planes"},
-        {"source": "img/horizontal_2/horizontal_2.2.jpeg", "alt": "Alternate view of Horizontal No. 2"},
-        {"source": "img/horizontal_2/horizontal_2.3.mov", "alt": "Horizontal No. 2 moving in the air"}
+        {
+          "source": "img/horizontal_2/horizontal_2.1.jpeg",
+          "alt": "Horizontal No. 2 mobile with wide oval planes"
+        },
+        {
+          "source": "img/horizontal_2/horizontal_2.2.jpeg",
+          "alt": "Alternate view of Horizontal No. 2"
+        },
+        {
+          "source": "img/horizontal_2/horizontal_2.3.mov",
+          "alt": "Horizontal No. 2 moving in the air"
+        }
       ]
     },
     {
@@ -132,10 +165,22 @@
       "availability": "inquire",
       "featured": true,
       "media": [
-        {"source": "img/horizontal_3/horizontal_3.1.jpeg", "alt": "Horizontal No. 3 mobile viewed from below"},
-        {"source": "img/horizontal_3/horizontal_3.2.jpeg", "alt": "Side view of Horizontal No. 3"},
-        {"source": "img/horizontal_3/horizontal_3.3.jpeg", "alt": "Alternate view of the layered planes in Horizontal No. 3"},
-        {"source": "img/horizontal_3/horizontal_3.4.mov", "alt": "Horizontal No. 3 in motion"}
+        {
+          "source": "img/horizontal_3/horizontal_3.1.jpeg",
+          "alt": "Horizontal No. 3 mobile viewed from below"
+        },
+        {
+          "source": "img/horizontal_3/horizontal_3.2.jpeg",
+          "alt": "Side view of Horizontal No. 3"
+        },
+        {
+          "source": "img/horizontal_3/horizontal_3.3.jpeg",
+          "alt": "Alternate view of the layered planes in Horizontal No. 3"
+        },
+        {
+          "source": "img/horizontal_3/horizontal_3.4.mov",
+          "alt": "Horizontal No. 3 in motion"
+        }
       ]
     },
     {
@@ -151,9 +196,18 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/horizontal_fin/horizontal_fin.1.jpeg", "alt": "Horizontal Fin mobile with tapered counterweights"},
-        {"source": "img/horizontal_fin/horizontal_fin.2.jpeg", "alt": "Alternate angle of Horizontal Fin"},
-        {"source": "img/horizontal_fin/horizontal_fin.3.mov", "alt": "Horizontal Fin mobile in motion"}
+        {
+          "source": "img/horizontal_fin/horizontal_fin.1.jpeg",
+          "alt": "Horizontal Fin mobile with tapered counterweights"
+        },
+        {
+          "source": "img/horizontal_fin/horizontal_fin.2.jpeg",
+          "alt": "Alternate angle of Horizontal Fin"
+        },
+        {
+          "source": "img/horizontal_fin/horizontal_fin.3.mov",
+          "alt": "Horizontal Fin mobile in motion"
+        }
       ]
     },
     {
@@ -169,9 +223,18 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/boxes/boxes.1.jpeg", "alt": "Boxes mobile with suspended rectilinear forms"},
-        {"source": "img/boxes/boxes.2.jpeg", "alt": "Alternate view of the Boxes mobile"},
-        {"source": "img/boxes/boxes.3.mov", "alt": "Boxes mobile moving in place"}
+        {
+          "source": "img/boxes/boxes.1.jpeg",
+          "alt": "Boxes mobile with suspended rectilinear forms"
+        },
+        {
+          "source": "img/boxes/boxes.2.jpeg",
+          "alt": "Alternate view of the Boxes mobile"
+        },
+        {
+          "source": "img/boxes/boxes.3.mov",
+          "alt": "Boxes mobile moving in place"
+        }
       ]
     },
     {
@@ -187,11 +250,26 @@
       "availability": "inquire",
       "featured": true,
       "media": [
-        {"source": "img/double_trestle/image0 (1).jpeg", "alt": "Double Trestle mobile with crescent and truss-like forms"},
-        {"source": "img/double_trestle/image1 (1).jpeg", "alt": "Alternate view of the Double Trestle construction"},
-        {"source": "img/double_trestle/image2.jpeg", "alt": "Detail of the balanced elements in Double Trestle"},
-        {"source": "img/double_trestle/image3.jpeg", "alt": "Wide view of Double Trestle"},
-        {"source": "img/double_trestle/Video (1).mov", "alt": "Double Trestle mobile in motion"}
+        {
+          "source": "img/double_trestle/image0 (1).jpeg",
+          "alt": "Double Trestle mobile with crescent and truss-like forms"
+        },
+        {
+          "source": "img/double_trestle/image1 (1).jpeg",
+          "alt": "Alternate view of the Double Trestle construction"
+        },
+        {
+          "source": "img/double_trestle/image2.jpeg",
+          "alt": "Detail of the balanced elements in Double Trestle"
+        },
+        {
+          "source": "img/double_trestle/image3.jpeg",
+          "alt": "Wide view of Double Trestle"
+        },
+        {
+          "source": "img/double_trestle/Video (1).mov",
+          "alt": "Double Trestle mobile in motion"
+        }
       ]
     },
     {
@@ -207,10 +285,22 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/post_mod_1/post_mod_1.1.jpeg", "alt": "Postmodern No. 1 with red, white, and dark suspended shapes"},
-        {"source": "img/post_mod_1/post_mod_1.2.jpeg", "alt": "Alternate view of Postmodern No. 1"},
-        {"source": "img/post_mod_1/post_mod_1.3.mov", "alt": "Postmodern No. 1 moving"},
-        {"source": "img/post_mod_1/post_mod_1.mov", "alt": "Wide motion study of Postmodern No. 1"}
+        {
+          "source": "img/post_mod_1/post_mod_1.1.jpeg",
+          "alt": "Postmodern No. 1 with red, white, and dark suspended shapes"
+        },
+        {
+          "source": "img/post_mod_1/post_mod_1.2.jpeg",
+          "alt": "Alternate view of Postmodern No. 1"
+        },
+        {
+          "source": "img/post_mod_1/post_mod_1.3.mov",
+          "alt": "Postmodern No. 1 moving"
+        },
+        {
+          "source": "img/post_mod_1/post_mod_1.mov",
+          "alt": "Wide motion study of Postmodern No. 1"
+        }
       ]
     },
     {
@@ -226,13 +316,34 @@
       "availability": "inquire",
       "featured": true,
       "media": [
-        {"source": "img/post_mod_2/post_mod_2.1.jpeg", "alt": "Postmodern No. 2 suspended across an interior"},
-        {"source": "img/post_mod_2/post_mod_2.2.jpeg", "alt": "Alternate view of the branching Postmodern No. 2 mobile"},
-        {"source": "img/post_mod_2/post_mod_2.3.jpeg", "alt": "Detail view of Postmodern No. 2"},
-        {"source": "img/post_mod_2/post_mod_2.4.jpeg", "alt": "Wide view of Postmodern No. 2"},
-        {"source": "img/post_mod_2/post_mod_2.6.jpeg", "alt": "Postmodern No. 2 photographed from below"},
-        {"source": "img/post_mod_2/post_mod_2.7.jpeg", "alt": "Alternate installation view of Postmodern No. 2"},
-        {"source": "img/post_mod_2/post_mod_2.5.mov", "alt": "Postmodern No. 2 in motion"}
+        {
+          "source": "img/post_mod_2/post_mod_2.1.jpeg",
+          "alt": "Postmodern No. 2 suspended across an interior"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.2.jpeg",
+          "alt": "Alternate view of the branching Postmodern No. 2 mobile"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.3.jpeg",
+          "alt": "Detail view of Postmodern No. 2"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.4.jpeg",
+          "alt": "Wide view of Postmodern No. 2"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.6.jpeg",
+          "alt": "Postmodern No. 2 photographed from below"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.7.jpeg",
+          "alt": "Alternate installation view of Postmodern No. 2"
+        },
+        {
+          "source": "img/post_mod_2/post_mod_2.5.mov",
+          "alt": "Postmodern No. 2 in motion"
+        }
       ]
     },
     {
@@ -248,9 +359,18 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/triple_white/triple_white.1.jpeg", "alt": "Triple White mobile with three curved white planes"},
-        {"source": "img/triple_white/triple_white.2.jpeg", "alt": "Alternate view of Triple White"},
-        {"source": "img/triple_white/triple_white.3.mov", "alt": "Triple White mobile in motion"}
+        {
+          "source": "img/triple_white/triple_white.1.jpeg",
+          "alt": "Triple White mobile with three curved white planes"
+        },
+        {
+          "source": "img/triple_white/triple_white.2.jpeg",
+          "alt": "Alternate view of Triple White"
+        },
+        {
+          "source": "img/triple_white/triple_white.3.mov",
+          "alt": "Triple White mobile in motion"
+        }
       ]
     },
     {
@@ -266,10 +386,22 @@
       "availability": "inquire",
       "featured": false,
       "media": [
-        {"source": "img/zigzag/zigzag.1.jpeg", "alt": "Zigzag mobile with stepped linear arms"},
-        {"source": "img/zigzag/zigzag.2.jpeg", "alt": "Alternate view of the Zigzag mobile"},
-        {"source": "img/zigzag/zigzag.3.jpeg", "alt": "Detail view of Zigzag"},
-        {"source": "img/zigzag/zigzag.4.mov", "alt": "Zigzag mobile in motion"}
+        {
+          "source": "img/zigzag/zigzag.1.jpeg",
+          "alt": "Zigzag mobile with stepped linear arms"
+        },
+        {
+          "source": "img/zigzag/zigzag.2.jpeg",
+          "alt": "Alternate view of the Zigzag mobile"
+        },
+        {
+          "source": "img/zigzag/zigzag.3.jpeg",
+          "alt": "Detail view of Zigzag"
+        },
+        {
+          "source": "img/zigzag/zigzag.4.mov",
+          "alt": "Zigzag mobile in motion"
+        }
       ]
     },
     {
@@ -285,9 +417,45 @@
       "availability": "made-to-order",
       "featured": false,
       "media": [
-        {"source": "img/sample_message/sample_message.1.jpeg", "alt": "Custom Message Mobile with colorful suspended letters"},
-        {"source": "img/sample_message/sample_message.2.jpeg", "alt": "Alternate view of the custom Message Mobile"},
-        {"source": "img/sample_message/sample_message.3.mov", "alt": "Custom Message Mobile in motion"}
+        {
+          "source": "img/sample_message/sample_message.1.jpeg",
+          "alt": "Custom Message Mobile with colorful suspended letters"
+        },
+        {
+          "source": "img/sample_message/sample_message.2.jpeg",
+          "alt": "Alternate view of the custom Message Mobile"
+        },
+        {
+          "source": "img/sample_message/sample_message.3.mov",
+          "alt": "Custom Message Mobile in motion"
+        }
+      ]
+    },
+    {
+      "id": "perpendicular-pendulums",
+      "title": "Perpendicular Pendulums",
+      "category": "wall-mounted-mobiles",
+      "description": "Wall mounted sculpture with multiple pendulums that sway in the wind.",
+      "price": null,
+      "currency": "USD",
+      "dimensions": "12\" x 12\" x 24\"",
+      "materials": "Steel, Copper, Wood",
+      "year": 2026,
+      "availability": "available",
+      "featured": true,
+      "media": [
+        {
+          "source": "img/perpendicular_pendulums/perpendicular-pendulums.1.mp4",
+          "alt": "Perpendicular Pendulums — view 1"
+        },
+        {
+          "source": "img/perpendicular_pendulums/perpendicular-pendulums.2.webp",
+          "alt": "Perpendicular Pendulums — view 2"
+        },
+        {
+          "source": "img/perpendicular_pendulums/perpendicular-pendulums.3.png",
+          "alt": "Perpendicular Pendulums — view 3"
+        }
       ]
     }
   ]
