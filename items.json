@@ -2,9 +2,9 @@
   "version": 1,
   "categories": [
     {
-      "id": "simple-mobiles",
-      "name": "Simple Mobiles",
-      "description": "Airy compositions built from a restrained vocabulary of balanced forms and color."
+      "id": "sculptural-mobiles",
+      "name": "Sculptural Mobiles",
+      "description": "Complex constructions that combine engineered geometry with responsive, suspended motion."
     },
     {
       "id": "horizontal-mobiles",
@@ -12,9 +12,9 @@
       "description": "Wide, layered works that carry movement across a room with long lines and shifting planes."
     },
     {
-      "id": "sculptural-mobiles",
-      "name": "Sculptural Mobiles",
-      "description": "Complex constructions that combine engineered geometry with responsive, suspended motion."
+      "id": "simple-mobiles",
+      "name": "Simple Mobiles",
+      "description": "Airy compositions built from a restrained vocabulary of balanced forms and color."
     },
     {
       "id": "custom-mobiles",
