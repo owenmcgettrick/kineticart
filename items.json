@@ -148,7 +148,8 @@
         },
         {
           "source": "img/horizontal_2/horizontal_2.3.mov",
-          "alt": "Horizontal No. 2 moving in the air"
+          "alt": "Horizontal No. 2 moving in the air",
+          "poster": "img/web/horizontal-2/horizontal-2-poster-480.jpg"
         }
       ]
     },
@@ -179,7 +180,8 @@
         },
         {
           "source": "img/horizontal_3/horizontal_3.4.mov",
-          "alt": "Horizontal No. 3 in motion"
+          "alt": "Horizontal No. 3 in motion",
+          "poster": "img/web/horizontal-3/horizontal-3-poster-480.jpg"
         }
       ]
     },
@@ -206,7 +208,8 @@
         },
         {
           "source": "img/horizontal_fin/horizontal_fin.3.mov",
-          "alt": "Horizontal Fin mobile in motion"
+          "alt": "Horizontal Fin mobile in motion",
+          "poster": "img/web/horizontal-fin/horizontal-fin-poster-480.jpg"
         }
       ]
     },
@@ -233,7 +236,8 @@
         },
         {
           "source": "img/boxes/boxes.3.mov",
-          "alt": "Boxes mobile moving in place"
+          "alt": "Boxes mobile moving in place",
+          "poster": "img/web/boxes/boxes-poster-480.jpg"
         }
       ]
     },
@@ -268,7 +272,8 @@
         },
         {
           "source": "img/double_trestle/Video (1).mov",
-          "alt": "Double Trestle mobile in motion"
+          "alt": "Double Trestle mobile in motion",
+          "poster": "img/web/double-trestle/double-trestle-poster-480.jpg"
         }
       ]
     },
@@ -295,7 +300,8 @@
         },
         {
           "source": "img/post_mod_1/post_mod_1.3.mov",
-          "alt": "Postmodern No. 1 moving"
+          "alt": "Postmodern No. 1 moving",
+          "poster": "img/web/post-mod-1/post-mod-1-poster-480.jpg"
         },
         {
           "source": "img/post_mod_1/post_mod_1.mov",
@@ -342,7 +348,8 @@
         },
         {
           "source": "img/post_mod_2/post_mod_2.5.mov",
-          "alt": "Postmodern No. 2 in motion"
+          "alt": "Postmodern No. 2 in motion",
+          "poster": "img/web/post-mod-2/post-mod-2-poster-480.jpg"
         }
       ]
     },
@@ -369,7 +376,8 @@
         },
         {
           "source": "img/triple_white/triple_white.3.mov",
-          "alt": "Triple White mobile in motion"
+          "alt": "Triple White mobile in motion",
+          "poster": "img/web/triple-white/triple-white-poster-480.jpg"
         }
       ]
     },
@@ -400,7 +408,8 @@
         },
         {
           "source": "img/zigzag/zigzag.4.mov",
-          "alt": "Zigzag mobile in motion"
+          "alt": "Zigzag mobile in motion",
+          "poster": "img/web/zigzag/zigzag-poster-480.jpg"
         }
       ]
     },
@@ -427,7 +436,8 @@
         },
         {
           "source": "img/sample_message/sample_message.3.mov",
-          "alt": "Custom Message Mobile in motion"
+          "alt": "Custom Message Mobile in motion",
+          "poster": "img/web/sample-message/sample-message-poster-480.jpg"
         }
       ]
     },
@@ -446,7 +456,8 @@
       "media": [
         {
           "source": "img/perpendicular_pendulums/perpendicular-pendulums.1.mp4",
-          "alt": "Perpendicular Pendulums — view 1"
+          "alt": "Perpendicular Pendulums — view 1",
+          "poster": "img/web/perpendicular-pendulums/perpendicular-pendulums-poster-480.jpg"
         },
         {
           "source": "img/perpendicular_pendulums/perpendicular-pendulums.2.webp",
@@ -501,7 +512,8 @@
       "media": [
         {
           "source": "img/black_and_white_pendulum/black-and-white-pendulum.1.mov",
-          "alt": "Black and White Pendulum — view 1"
+          "alt": "Black and White Pendulum — view 1",
+          "poster": "img/web/black-and-white-pendulum/black-and-white-pendulum-poster-480.jpg"
         },
         {
           "source": "img/black_and_white_pendulum/black-and-white-pendulum.2.png",
