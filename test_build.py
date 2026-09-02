@@ -79,6 +79,12 @@ class ArtworkPageTests(unittest.TestCase):
                 self.assertIn('href="index.html?artwork=', page)
                 self.assertNotIn('>See Detail</a>', page)
 
+    def test_video_can_use_an_explicit_first_frame_poster(self):
+        item = next(item for item in self.catalog["items"] if item["id"] == "circular-platforms-structural")
+        video = item["media"][0]
+        rendered = build.render_media(item, video, 0, eager=False)
+        self.assertIn(f'poster="{video["poster"]}"', rendered)
+
     def test_mailing_list_page_has_only_name_and_email_fields(self):
         page = render_mailinglist_page(self.site, "1.0")
         self.assertIn('<h1 id="page-title">Kinetic Creations</h1>', page)

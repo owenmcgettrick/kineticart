@@ -73,6 +73,12 @@ def validate(site: dict, catalog: dict) -> None:
                 raise FileNotFoundError(f"Missing media for {item['id']}: {media['source']}")
             if source.suffix.lower() not in IMAGE_EXTENSIONS | VIDEO_EXTENSIONS:
                 raise ValueError(f"Unsupported media type: {media['source']}")
+            if media.get("poster"):
+                poster = ROOT / media["poster"]
+                if not poster.is_file():
+                    raise FileNotFoundError(f"Missing poster for {item['id']}: {media['poster']}")
+                if poster.suffix.lower() not in IMAGE_EXTENSIONS:
+                    raise ValueError(f"Unsupported poster type: {media['poster']}")
 
 
 def image_dimensions(path: Path) -> tuple[int, int]:
@@ -127,7 +133,7 @@ def render_media(item: dict, media: dict, index: int, *, eager: bool) -> str:
     else:
         converted = video_derivative_path(source, item["id"])
         display_source = relative_to_root(converted) if converted.exists() else media["source"]
-        poster = first_poster(item)
+        poster = media.get("poster") or first_poster(item)
         poster_attribute = f' poster="{escaped(poster)}"' if poster else ""
         element = (
             f'<video muted loop playsinline preload="metadata" aria-label="{alt}"{poster_attribute}>'
