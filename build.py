@@ -128,7 +128,8 @@ def render_media(item: dict, media: dict, index: int, *, eager: bool) -> str:
         loading = "eager" if eager else "lazy"
         element = (
             f'<picture>{source_tag}<img src="{escaped(display_source)}" alt="{alt}" '
-            f'width="{width}" height="{height}" loading="{loading}" decoding="async"></picture>'
+            f'width="{width}" height="{height}" loading="{loading}" decoding="async" '
+            f'data-full-src="{escaped(media["source"])}"></picture>'
         )
     else:
         converted = video_derivative_path(source, item["id"])
@@ -206,6 +207,18 @@ def render_card(item: dict, category: dict, *, eager: bool, preview: bool = Fals
 
 
 def render_detail_page(site: dict, item: dict, category: dict) -> str:
+    lightbox_enabled = bool(item.get("image_lightbox"))
+    body_attribute = ' data-image-lightbox="true"' if lightbox_enabled else ""
+    lightbox = '''
+  <dialog class="image-lightbox" data-lightbox-dialog aria-label="Expanded artwork image">
+    <div class="image-lightbox-toolbar">
+      <button class="image-lightbox-size" type="button" data-lightbox-size>View actual size</button>
+      <button class="image-lightbox-close" type="button" data-lightbox-close aria-label="Close expanded image">×</button>
+    </div>
+    <div class="image-lightbox-stage" data-lightbox-stage data-mode="fit">
+      <img class="image-lightbox-image" data-lightbox-image src="" alt="">
+    </div>
+  </dialog>''' if lightbox_enabled else ""
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -217,11 +230,12 @@ def render_detail_page(site: dict, item: dict, category: dict) -> str:
   <link rel="stylesheet" href="{asset_url('style.css')}">
   <script src="{asset_url('script.js')}" defer></script>
 </head>
-<body>
+<body{body_attribute}>
   <main class="detail-page">
     <a class="button back-button" href="index.html#{escaped(item['id'])}">← Back</a>
 {render_card(item, category, eager=True)}
   </main>
+{lightbox}
 </body>
 </html>
 '''

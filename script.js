@@ -71,6 +71,62 @@ document.addEventListener('DOMContentLoaded', () => {
     carousels.forEach((carousel) => observer.observe(carousel));
   }
 
+  const lightbox = document.querySelector('[data-lightbox-dialog]');
+  if (lightbox instanceof HTMLDialogElement) {
+    const lightboxImage = lightbox.querySelector('[data-lightbox-image]');
+    const lightboxStage = lightbox.querySelector('[data-lightbox-stage]');
+    const sizeButton = lightbox.querySelector('[data-lightbox-size]');
+    const closeButton = lightbox.querySelector('[data-lightbox-close]');
+    let opener = null;
+    let fitSource = '';
+    let fullSource = '';
+
+    const setLightboxMode = (mode) => {
+      const actualSize = mode === 'actual';
+      lightboxStage.dataset.mode = mode;
+      lightboxImage.src = actualSize ? fullSource : fitSource;
+      sizeButton.textContent = actualSize ? 'Fit to screen' : 'View actual size';
+      sizeButton.setAttribute('aria-pressed', String(actualSize));
+      lightboxStage.scrollTo(0, 0);
+    };
+
+    const openLightbox = (image) => {
+      opener = image;
+      fitSource = image.currentSrc || image.src;
+      fullSource = image.dataset.fullSrc || fitSource;
+      lightboxImage.alt = image.alt;
+      setLightboxMode('fit');
+      lightbox.showModal();
+      document.body.classList.add('lightbox-open');
+    };
+
+    document.querySelectorAll('.detail-page .carousel-item img').forEach((image) => {
+      image.classList.add('lightbox-trigger');
+      image.tabIndex = 0;
+      image.setAttribute('role', 'button');
+      image.setAttribute('aria-label', `Expand ${image.alt || 'artwork image'}`);
+      image.addEventListener('click', () => openLightbox(image));
+      image.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        openLightbox(image);
+      });
+    });
+
+    sizeButton.addEventListener('click', () => {
+      setLightboxMode(lightboxStage.dataset.mode === 'actual' ? 'fit' : 'actual');
+    });
+    closeButton.addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target === lightboxStage) lightbox.close();
+    });
+    lightbox.addEventListener('close', () => {
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.removeAttribute('src');
+      opener?.focus();
+    });
+  }
+
   const artworkSelect = document.querySelector('#contact-artwork');
   const message = document.querySelector('.contact-form textarea');
   const requestedArtwork = new URLSearchParams(window.location.search).get('artwork');

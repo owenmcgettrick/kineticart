@@ -79,6 +79,17 @@ class ArtworkPageTests(unittest.TestCase):
                 self.assertIn('href="index.html?artwork=', page)
                 self.assertNotIn('>See Detail</a>', page)
 
+    def test_image_lightbox_is_enabled_only_for_opted_in_artwork(self):
+        enabled = next(item for item in self.catalog["items"] if item["id"] == "circular-platforms-structural")
+        disabled = next(item for item in self.catalog["items"] if item["id"] != enabled["id"])
+        enabled_page = render_detail_page(self.site, enabled, self.categories[enabled["category"]])
+        disabled_page = render_detail_page(self.site, disabled, self.categories[disabled["category"]])
+
+        self.assertIn('data-image-lightbox="true"', enabled_page)
+        self.assertIn('data-lightbox-dialog', enabled_page)
+        self.assertIn('data-lightbox-size', enabled_page)
+        self.assertNotIn('data-lightbox-dialog', disabled_page)
+
     def test_homepage_videos_use_explicit_first_frame_posters(self):
         for item in self.catalog["items"]:
             video = next(

@@ -623,6 +623,112 @@ textarea {
   min-height: 0;
 }
 
+body[data-image-lightbox] .detail-page .carousel-item img {
+  cursor: zoom-in;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.image-lightbox {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(16, 17, 17, 0.96);
+  color: white;
+}
+
+.image-lightbox[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(16, 17, 17, 0.82);
+}
+
+.image-lightbox-toolbar {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.image-lightbox-size,
+.image-lightbox-close {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(37, 38, 38, 0.9);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.24);
+}
+
+.image-lightbox-size {
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.image-lightbox-close {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.image-lightbox-size:hover,
+.image-lightbox-close:hover {
+  background: var(--red);
+}
+
+.image-lightbox-stage {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 4.5rem 1rem 1rem;
+  overflow: auto;
+}
+
+.image-lightbox-image {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-lightbox-stage[data-mode="fit"] .image-lightbox-image {
+  max-width: 100%;
+  max-height: calc(100dvh - 5.5rem);
+}
+
+.image-lightbox-stage[data-mode="actual"] {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.image-lightbox-stage[data-mode="actual"] .image-lightbox-image {
+  flex: 0 0 auto;
+  max-width: none;
+  max-height: none;
+}
+
 .artwork-copy {
   display: flex;
   flex-direction: column;
