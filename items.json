@@ -457,6 +457,33 @@
           "alt": "Perpendicular Pendulums — view 3"
         }
       ]
+    },
+    {
+      "id": "circular-platforms-structural",
+      "title": "Circular Platforms Structural",
+      "category": "sculptural-mobiles",
+      "description": "Take a stand on the platforms in motion ...",
+      "price": null,
+      "currency": "USD",
+      "dimensions": "24\" x 30\"",
+      "materials": "Steel, Copper, Mylar",
+      "year": 2026,
+      "availability": "available",
+      "featured": true,
+      "media": [
+        {
+          "source": "img/circular_platforms_structural/circular-platforms-structural.1.mov",
+          "alt": "Circular Platforms Structural — view 1"
+        },
+        {
+          "source": "img/circular_platforms_structural/circular-platforms-structural.2.png",
+          "alt": "Circular Platforms Structural — view 2"
+        },
+        {
+          "source": "img/circular_platforms_structural/circular-platforms-structural.3.png",
+          "alt": "Circular Platforms Structural — view 3"
+        }
+      ]
     }
   ]
 }
