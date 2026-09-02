@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css?v=a9d963efa1cf">
   <script src="script.js?v=966b91035737" defer></script>
 </head>
-<body>
+<body data-image-lightbox="true">
   <main class="detail-page">
     <a class="button back-button" href="index.html#horizontal-3">← Back</a>
 
@@ -35,5 +35,14 @@
       </article>
   </main>
 
+  <dialog class="image-lightbox" data-lightbox-dialog aria-label="Expanded artwork image">
+    <div class="image-lightbox-toolbar">
+      <button class="image-lightbox-size" type="button" data-lightbox-size>View actual size</button>
+      <button class="image-lightbox-close" type="button" data-lightbox-close aria-label="Close expanded image">×</button>
+    </div>
+    <div class="image-lightbox-stage" data-lightbox-stage data-mode="fit">
+      <img class="image-lightbox-image" data-lightbox-image src="" alt="">
+    </div>
+  </dialog>
 </body>
 </html>

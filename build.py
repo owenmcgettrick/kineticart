@@ -207,8 +207,6 @@ def render_card(item: dict, category: dict, *, eager: bool, preview: bool = Fals
 
 
 def render_detail_page(site: dict, item: dict, category: dict) -> str:
-    lightbox_enabled = bool(item.get("image_lightbox"))
-    body_attribute = ' data-image-lightbox="true"' if lightbox_enabled else ""
     lightbox = '''
   <dialog class="image-lightbox" data-lightbox-dialog aria-label="Expanded artwork image">
     <div class="image-lightbox-toolbar">
@@ -218,7 +216,7 @@ def render_detail_page(site: dict, item: dict, category: dict) -> str:
     <div class="image-lightbox-stage" data-lightbox-stage data-mode="fit">
       <img class="image-lightbox-image" data-lightbox-image src="" alt="">
     </div>
-  </dialog>''' if lightbox_enabled else ""
+  </dialog>'''
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,7 +228,7 @@ def render_detail_page(site: dict, item: dict, category: dict) -> str:
   <link rel="stylesheet" href="{asset_url('style.css')}">
   <script src="{asset_url('script.js')}" defer></script>
 </head>
-<body{body_attribute}>
+<body data-image-lightbox="true">
   <main class="detail-page">
     <a class="button back-button" href="index.html#{escaped(item['id'])}">← Back</a>
 {render_card(item, category, eager=True)}

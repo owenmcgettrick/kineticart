@@ -481,7 +481,6 @@
       "year": 2026,
       "availability": "available",
       "featured": true,
-      "image_lightbox": true,
       "media": [
         {
           "source": "img/circular_platforms_structural/circular-platforms-structural.1.mov",
