@@ -484,6 +484,33 @@
           "alt": "Circular Platforms Structural — view 3"
         }
       ]
+    },
+    {
+      "id": "black-and-white-pendulum",
+      "title": "Black and White Pendulum",
+      "category": "tabletop-mobiles",
+      "description": "Three Degrees of Freedom Table Top Pendulum",
+      "price": null,
+      "currency": "USD",
+      "dimensions": "14\" x 18\" x 16\"",
+      "materials": "Wood, Steel, Copper, Paper",
+      "year": 2026,
+      "availability": "available",
+      "featured": false,
+      "media": [
+        {
+          "source": "img/black_and_white_pendulum/black-and-white-pendulum.1.mov",
+          "alt": "Black and White Pendulum — view 1"
+        },
+        {
+          "source": "img/black_and_white_pendulum/black-and-white-pendulum.2.png",
+          "alt": "Black and White Pendulum — view 2"
+        },
+        {
+          "source": "img/black_and_white_pendulum/black-and-white-pendulum.3.png",
+          "alt": "Black and White Pendulum — view 3"
+        }
+      ]
     }
   ]
 }
